@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+
+<div class="card" style="width: 18rem;">
+   <form action="{% url 'post:My_Jokes'%}">
+    <div class="card-body">
+      <h5 class="card-title">Chistesito de Chuck  </h5>
+      <p class="card-text">{{ values.value }} </p>
+      <input type="hidden" name="id" id="id" value="{{values.url}}">
+      <a href="{% url 'post:Get' %}" class="btn btn-primary">Next</a>
+      <button class="btn btn-danger" type="submit">agregar</button>
+    </div>
+   </form>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'layout.html' %} {% block content %}
+
+<div class="container">
+  <div class="col-md-4 offset-md-4">
+    <form action="{% url 'post:Get_Jokes' %}"  class="card card-body p-5">
+      <h1 class="h4">Login</h1>
+      <div class="form-check my-2 p-0">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="youremail@site.com"
+          class="form-input"
+        />
+      </div>
+      <button class="btn btn-secondary">Send</button>
+      <h1 class="h1">{{ mensaje }} </h1>
+    </form>
+  </div>
+</div>
+{% endblock %}

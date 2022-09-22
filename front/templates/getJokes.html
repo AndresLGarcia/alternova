@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+ <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <input type="hidden" name="user" id="user" value="{{ user }}">
+      <input type="hidden" name="email" id="email" value="{{ email }}">
+
+      <h5 class="card-title">Chistesito de Chuck </h5>
+      <p class="card-text" id="descripcion"></p>
+      <button id="btnList" class="btn btn-primary">Get Jokes</button>
+      <button id="btnAdd" class="btn btn-danger">A favorito </button>
+      
+      <a href="{% url 'post:Get_Jokes'%}"><button id="btnmyjokes" class="btn btn-secundary">jokes</button></a>
+
+    </div>
+  </div>
+
+{% endblock %}
